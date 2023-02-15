@@ -1,0 +1,36 @@
+.Navbar-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+
+    &.dark {
+        background-color: $Dark-Blue;
+        color: $White;
+    }
+
+    &.light {
+        background-color: $White;
+        color: $Very-Dark-Blue-Text;
+    }
+
+    .left {
+        font-weight: 600;
+        margin-left: 40px;
+
+    }
+
+    .right {
+        cursor: pointer;
+        align-items: center;
+        display: flex;
+        gap: 10px;
+        margin-right: 40px;
+
+        img {
+            width: 20px;
+        }
+
+    }
+}

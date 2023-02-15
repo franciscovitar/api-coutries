@@ -1,0 +1,100 @@
+.search-container {
+    display: flex;
+    padding: 40px;
+    justify-content: space-between;
+
+
+    form {
+        border-radius: 5px;
+        padding: 15px 30px;
+        width: 300px;
+        background: $Dark-Blue;
+        color: $White;
+        display: flex;
+        justify-content: space-between;
+
+        &.dark {
+            background: $Dark-Blue;
+        }
+
+        &.light {
+            background: $White;
+        }
+
+        input {
+            background-color: transparent;
+            outline: none;
+            border: none;
+            flex-basis: 90%;
+
+            &.dark {
+                color: $White;
+
+                &::placeholder {
+                    color: $White;
+                }
+            }
+
+            &.light {
+                color: $Very-Dark-Blue-Text;
+
+                &::placeholder {
+                    color: $Very-Dark-Blue-Text
+                }
+            }
+
+        }
+
+        i {
+
+            &.dark {
+                color: $White;
+            }
+
+            &.light {
+                color: $Very-Dark-Blue-Text;
+
+            }
+        }
+    }
+
+    .select {
+
+        border-radius: 5px;
+
+        &.dark {
+            background: $Dark-Blue;
+
+            select {
+                color: $White;
+            }
+        }
+
+        &.light {
+            background: $White;
+            color: $Very-Dark-Blue-Text;
+        }
+
+        select {
+            border: none;
+            background: transparent;
+            padding: 15px 20px;
+            width: 200px;
+            outline: none;
+            text-decoration: none;
+
+            option {
+
+                &.dark {
+                    background: $Dark-Blue;
+                    color: $White;
+                }
+
+                &.light {
+                    background: $White;
+                    color: $Very-Dark-Blue-Text;
+                }
+            }
+        }
+    }
+}

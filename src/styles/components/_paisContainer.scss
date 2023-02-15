@@ -1,0 +1,50 @@
+.pais-container {
+    width: 320px;
+
+    a {
+        text-decoration: none;
+    }
+
+    .up {
+        height: 200px;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .down {
+        height: 170px;
+
+        &.dark {
+            background-color: $Dark-Blue;
+            color: $White;
+        }
+
+        &.light {
+            background-color: $White;
+            color: $Very-Dark-Blue-Text;
+        }
+
+        .down-container {
+            padding: 20px;
+
+            h4 {
+                margin-bottom: 10px;
+                font-weight: 800;
+            }
+
+            p {
+                font-weight: 300;
+
+                span {
+                    font-weight: 600;
+                }
+
+            }
+        }
+
+    }
+}

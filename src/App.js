@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import NavBar from "./components/NavBar";
+import Paises from "./components/Paises";
+import PaisGrande from "./components/PaisGrande";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useState } from "react";
 
 function App() {
+  const [mode, setMode] = useState(true);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <NavBar setMode={setMode} mode={mode}></NavBar>
+      <Routes className="fondo">
+        <Route index element={<Paises mode={mode}></Paises>}></Route>
+        <Route
+          path={`/name/:countryName`}
+          element={<PaisGrande mode={mode}></PaisGrande>}
+        ></Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
